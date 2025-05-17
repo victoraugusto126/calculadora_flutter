@@ -10,35 +10,38 @@ class ResultadoScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Resultado'),
-                    centerTitle: true,
+        centerTitle: true,
+        
 
         backgroundColor: Colors.deepOrange,
       ),
       body: Padding(
         padding: EdgeInsets.all(18.0),
         child: Center(
-        child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,    // opcional: centraliza verticalmente
+          child: Column(
+            mainAxisAlignment:
+                MainAxisAlignment.center,
 
-          children: [
-            Text(resultado,
-            style: TextStyle(fontSize: 25),
-            textAlign: TextAlign.center,
-            ),
-            
+            children: [
+              Text(
+                resultado,
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.center,
+              ),
 
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.deepOrange,
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrange,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Voltar', style: TextStyle(color: Colors.white)),
+              ),
+            ],
+          ),
+        ),
       ),
-              onPressed: (){
-                Navigator.pop(context);
-              }, child: Text(
-                'Voltar',
-                style: TextStyle(color: Colors.white),
-                ),)
-          ],
-        ),),),
     );
   }
 }
